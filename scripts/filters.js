@@ -1,7 +1,9 @@
-var filters = angular.module('MyFilters',[]);
+define(['angular'],function(){
+	var filters = angular.module('MyFilters',[]);
 
-filters.filter('total', function(){
-	return function(item){
-		return item.quantity * item.price;
-	};
+	filters.filter('total', function(){
+		return function(item){
+			return item.quantity * item.price;
+		};
+	});
 });
