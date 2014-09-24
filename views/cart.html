@@ -1,0 +1,27 @@
+Your name here: <input type='text' ng-model='user.name' />
+<br>
+<br>
+This is your shopping cart! {{ user.name }}
+
+<ul>
+
+  <li ng-repeat='item in items'>
+    <span ng-show='!editable'>
+      {{ item.name }} - {{ item.price }} - Number: {{ item.quantity }} - Total: {{ item | total  }} <a href='#' ng-click='editable=true'> Edit </a>
+    </span>
+    <span>
+      
+    </span>
+  </li>
+</ul>
+
+<br>
+<br>
+
+<form ng-submit='newItem()'>
+  Name: <input type='text' ng-model='name' name='name' />
+  Price: <input type='text' ng-model='price' name='price' />
+  Num Items: <input type='number' ng-model='quantity' name='quantity' />
+  <br><br>
+  <input type='submit' />
+</form>

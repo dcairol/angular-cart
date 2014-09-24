@@ -1,7 +1,7 @@
-define(['angular'],function(){
-	var my_controllers = angular.module('MyControllers',[]);
+define(['angular'],function ( angular ){
 
-	my_controllers.controller('CartController', function CartController( $scope ){
+	return angular.module('myApp.controllers',[])
+	.controller('CartController', function CartController( $scope ){
 	  $scope.items = [{name: 'Leche', price: 1000, quantity: 2}];
 
 	  $scope.newItem = function newItem(){
@@ -9,5 +9,5 @@ define(['angular'],function(){
 	    this.name = '';
 	    this.price = '';
 	  }
-	});	
+	});
 });
