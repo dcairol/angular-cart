@@ -6,12 +6,7 @@ This is your shopping cart! {{ user.name }}
 <ul>
 
   <li ng-repeat='item in items'>
-    <span ng-show='!editable'>
-      {{ item.name }} - {{ item.price }} - Number: {{ item.quantity }} - Total: {{ item | total  }} <a href='#' ng-click='editable=true'> Edit </a>
-    </span>
-    <span>
-      
-    </span>
+      {{ item.name }} - {{ item.price }} - Number: {{ item.quantity }} - Total: {{ item | total  }} <a ng-href='#items/{{item.name}}' ng-click='edit(item.id)'> Edit </a>
   </li>
 </ul>
 
